@@ -1,0 +1,11 @@
+.bottom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(img/tabiat.jpg);
+  background-size: cover;
+  background-position: center;
+  clip-path: circle(25% at 70% 60%);
+}

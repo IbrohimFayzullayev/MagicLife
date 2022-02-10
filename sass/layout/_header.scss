@@ -1,0 +1,25 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(126, 213, 111, 0.589),
+      #28b485
+    ),
+    url(/img/bor.jpg);
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+  text-align: center;
+  color: white;
+}
+.header__logo {
+  display: block;
+  margin: 3rem 3rem;
+  width: 15rem;
+  animation-name: logo;
+  animation-duration: 3s;
+}
