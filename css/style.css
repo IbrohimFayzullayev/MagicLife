@@ -35,6 +35,10 @@
 html {
   font-size: 62.5%; }
 
+body {
+  padding-top: 3rem;
+  box-sizing: border-box; }
+
 .header__name {
   font-size: 3rem;
   margin-bottom: 4rem;
@@ -149,3 +153,7 @@ html {
   width: 15rem;
   animation-name: logo;
   animation-duration: 3s; }
+
+.section-about {
+  padding: 25rem 0;
+  background-color: #f7f7f7; }
