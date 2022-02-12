@@ -1,7 +1,7 @@
 .row {
   max-width: $grid-width;
   margin: 0 auto;
-  background-color: #eee;
+  // background-color: #eee;
   &:not(:last-child) {
     margin-bottom: $space-vertical;
   }
@@ -10,9 +10,9 @@
 @include clearfix;
 
 [class^="col-"] {
-  background-color: orangered;
+  // background-color: orangered;
   float: left;
-  height: 5rem;
+  // height: 5rem;
 
   &:not(:last-child) {
     margin-right: $space-gorizontal;

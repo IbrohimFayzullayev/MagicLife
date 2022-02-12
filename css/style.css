@@ -36,7 +36,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  padding-top: 3rem;
+  padding: 3rem;
   box-sizing: border-box; }
 
 .header__name {
@@ -53,12 +53,54 @@ body {
   animation-name: nicname;
   animation-duration: 2s; }
 
+.heading-secondary {
+  font-size: 3.6rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: all 0.2s;
+  letter-spacing: 0.2rem; }
+  .heading-secondary:hover {
+    transform: skewY(2deg) skewX(15deg);
+    text-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2); }
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #555; }
+
+.text-box {
+  color: #555;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.8;
+  margin-top: 1rem; }
+  .text-box:not(:last-child) {
+    margin-bottom: 3rem; }
+
+.u-text-center {
+  text-align: center; }
+
+.u-margin-bottom--big {
+  margin-bottom: 8rem; }
+
+.u-margin-bottom--medium {
+  margin-bottom: 4rem; }
+
+.u-margin-bottom--small {
+  margin-bottom: 2rem; }
+
 .header__btn {
   font-size: 1.8rem;
   margin-top: 5rem;
   width: 30rem;
   height: 5rem;
-  background-color: white;
+  background-color: #fff;
   color: black;
   border: none;
   text-decoration: none;
@@ -75,7 +117,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: white;
+    background-color: #fff;
     color: black;
     border: none;
     text-decoration: none;
@@ -85,6 +127,77 @@ body {
   .header__btn:hover::after {
     transform: scale(2);
     opacity: 0; }
+
+.btn-text {
+  transition: all 0.2s; }
+  .btn-text:link, .btn-text:visited {
+    font-size: 1.6rem;
+    color: #7ed56f;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 0.1rem solid #7ed56f; }
+  .btn-text:hover {
+    background-color: #7ed56f;
+    padding: 0.3rem;
+    color: #fff;
+    transform: translateY(-0.5rem); }
+  .btn-text:active {
+    transform: translateY(0rem); }
+
+.compositions {
+  position: relative; }
+  .compositions__photo {
+    width: 55%;
+    border-radius: 1px;
+    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.4);
+    position: absolute;
+    z-index: 10;
+    outline-offset: 2rem;
+    transition: all 0.2s; }
+    .compositions__photo--1 {
+      top: -2rem;
+      left: 0; }
+      .compositions__photo--1:hover {
+        z-index: 20;
+        transform: scale(1.2);
+        outline: 1rem solid #7ed56f; }
+    .compositions__photo--2 {
+      right: 0rem;
+      top: 3rem; }
+      .compositions__photo--2:hover {
+        z-index: 20;
+        transform: scale(1.2);
+        outline: 1rem solid #7ed56f; }
+    .compositions__photo--3 {
+      left: 20%;
+      top: 10rem; }
+      .compositions__photo--3:hover {
+        z-index: 20;
+        transform: scale(1.2);
+        outline: 1rem solid #7ed56f; }
+  .compositions:hover .compositions__photo:not(:hover) {
+    transform: scale(0.9); }
+
+.future-box {
+  text-align: center;
+  padding: 2rem;
+  font-weight: normal;
+  background-color: #f7f7f7;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  transition: all 0.2s; }
+  .future-box-icon {
+    font-size: 5rem;
+    background-image: linear-gradient(to right, #7ed56f, #55c57a);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; }
+  .future-box:hover {
+    transform: translateY(-2rem) scale(1.05); }
 
 .bottom {
   position: absolute;
@@ -99,8 +212,7 @@ body {
 
 .row {
   max-width: 114rem;
-  margin: 0 auto;
-  background-color: #eee; }
+  margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
 
@@ -110,9 +222,7 @@ body {
   clear: both; }
 
 [class^="col-"] {
-  background-color: orangered;
-  float: left;
-  height: 5rem; }
+  float: left; }
   [class^="col-"]:not(:last-child) {
     margin-right: 6rem; }
 
@@ -143,6 +253,7 @@ body {
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.589), #28b485), url(../img/bor.jpg);
   background-size: cover;
   background-position: center;
+  width: 100%;
   clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
   text-align: center;
   color: white; }
@@ -156,4 +267,19 @@ body {
 
 .section-about {
   padding: 25rem 0;
-  background-color: #f7f7f7; }
+  background-color: #f7f7f7;
+  margin-top: -25vh;
+  margin-bottom: 25rem; }
+
+.section-feature {
+  padding: 35rem 0;
+  box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(85, 197, 122, 0.9)), url(../img/nat-4.jpg);
+  background-size: cover;
+  background-position: center;
+  transform: skewY(-7deg); }
+  .section-feature > * {
+    transform: skewY(7deg); }

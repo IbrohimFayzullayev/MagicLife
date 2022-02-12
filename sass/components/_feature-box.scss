@@ -1,0 +1,29 @@
+.future-box {
+  text-align: center;
+  padding: 2rem;
+  font-weight: normal;
+  background-color: $section-back-color;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  transition: all 0.2s;
+
+  &-icon {
+    font-size: 5rem;
+    background-image: linear-gradient(
+      to right,
+      $color-primary,
+      $color-primary-light
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  &:hover {
+    transform: translateY(-2rem) scale(1.05);
+  }
+}
