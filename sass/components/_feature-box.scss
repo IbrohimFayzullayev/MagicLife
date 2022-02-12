@@ -2,7 +2,7 @@
   text-align: center;
   padding: 2rem;
   font-weight: normal;
-  background-color: $section-back-color;
+  background-color: rgba($section-back-color, 0.6);
   height: 30rem;
   display: flex;
   flex-direction: column;
@@ -24,6 +24,7 @@
   }
 
   &:hover {
+    cursor: pointer;
     transform: translateY(-2rem) scale(1.05);
   }
 }
