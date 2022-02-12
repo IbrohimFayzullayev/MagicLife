@@ -5,6 +5,7 @@
   margin-bottom: 9rem;
 }
 .section-feature {
+  // margin-top: -8rem;
   padding: 35rem 0;
   box-sizing: border-box;
   height: 100vh;
@@ -22,4 +23,7 @@
   & > * {
     transform: skewY(7deg);
   }
+}
+.section-tour {
+  margin: 20rem 0 60rem 0;
 }

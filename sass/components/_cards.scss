@@ -1,0 +1,101 @@
+.card {
+  position: relative;
+  transition: all 0.5s;
+  -webkit-perspective: 150rem;
+  perspective: 150rem;
+  cursor: pointer;
+  display: block;
+  &__tour {
+    background-color: $section-back-color;
+    height: 45rem;
+    width: 30rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: all 0.5s;
+    &--front {
+      z-index: 5;
+      transform: rotateY(0deg);
+    }
+    &--back {
+      background-image: linear-gradient(
+        to right,
+        rgba($color-secondary-light-1, 0.98),
+        rgba($color-secondary-light-2, 0.98)
+      );
+      transform: rotateY(180deg);
+      text-align: center;
+    }
+    &--list {
+      &-ul {
+        margin-top: 2rem;
+        list-style: none;
+        text-align: center;
+        li {
+          margin: 0 auto;
+          max-width: 18rem;
+          font-size: 1.8rem;
+          padding: 1rem 0;
+          border-bottom: 1px solid rgba($color-black, 0.1);
+        }
+      }
+    }
+    &--price {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: $color-white;
+      text-transform: uppercase;
+      &-only {
+        font-size: 2rem;
+        margin-bottom: 7rem;
+      }
+      &-pr {
+        font-size: 6rem;
+        font-weight: normal;
+      }
+    }
+  }
+  &__photo {
+    background-image: linear-gradient(
+        to right,
+        rgba($color-secondary-light-1, 0.4),
+        rgba($color-secondary-light-2, 0.4)
+      ),
+      url(../../img/nat-6.jpg);
+    background-size: cover;
+    clip-path: polygon((0 0, 100% 0%, 100% 80%, 0% 100%));
+    width: 100%;
+    height: 45%;
+    z-index: 10;
+    -webkit-background-blend-mode: revert;
+    background-blend-mode: revert;
+    &--info {
+      position: absolute;
+      top: 10rem;
+      right: 3rem;
+      padding: 1rem;
+      background-image: linear-gradient(
+        to right,
+        rgba($color-secondary-light-1, 0.5),
+        rgba($color-secondary-light-2, 0.5)
+      );
+      font-size: 2.5rem;
+      color: $color-white;
+      line-height: 1.6;
+      text-transform: uppercase;
+      text-align: right;
+    }
+  }
+  &:hover {
+    .card__tour--front {
+      transform: rotateY(180deg);
+    }
+    .card__tour--back {
+      transform: rotateY(0deg);
+    }
+  }
+}

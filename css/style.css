@@ -1,3 +1,11 @@
+/* 
+COLORS:
+
+LightGreen: #7ed56f
+MediumGreen: #55c57a
+DarkGreen: #28b485
+
+*/
 @keyframes header__btn {
   0% {
     transform: translateY(-3px);
@@ -95,13 +103,13 @@ body {
 .u-margin-bottom--small {
   margin-bottom: 2rem; }
 
-.header__btn {
+.btn__white {
   font-size: 1.8rem;
   margin-top: 5rem;
   width: 30rem;
   height: 5rem;
   background-color: #fff;
-  color: black;
+  color: #555;
   border: none;
   text-decoration: none;
   padding: 1.5rem;
@@ -110,7 +118,7 @@ body {
   animation-duration: 3s;
   display: inline-block;
   position: relative; }
-  .header__btn::after {
+  .btn__white::after {
     content: "";
     position: absolute;
     top: 0;
@@ -124,7 +132,7 @@ body {
     border-radius: 2rem;
     z-index: -1;
     transition: all 0.4s; }
-  .header__btn:hover::after {
+  .btn__white:hover::after {
     transform: scale(2);
     opacity: 0; }
 
@@ -143,6 +151,11 @@ body {
     transform: translateY(-0.5rem); }
   .btn-text:active {
     transform: translateY(0rem); }
+
+.btn__buy {
+  width: 15rem;
+  text-align: center;
+  color: #555; }
 
 .compositions {
   position: relative; }
@@ -199,6 +212,77 @@ body {
   .future-box:hover {
     cursor: pointer;
     transform: translateY(-2rem) scale(1.05); }
+
+.card {
+  position: relative;
+  transition: all 0.5s;
+  perspective: 150rem;
+  cursor: pointer;
+  display: block; }
+  .card__tour {
+    background-color: #f7f7f7;
+    height: 45rem;
+    width: 30rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: all 0.5s; }
+    .card__tour--front {
+      z-index: 5;
+      transform: rotateY(0deg); }
+    .card__tour--back {
+      background-image: linear-gradient(to right, rgba(255, 185, 0, 0.98), rgba(255, 119, 48, 0.98));
+      transform: rotateY(180deg);
+      text-align: center; }
+    .card__tour--list-ul {
+      margin-top: 2rem;
+      list-style: none;
+      text-align: center; }
+      .card__tour--list-ul li {
+        margin: 0 auto;
+        max-width: 18rem;
+        font-size: 1.8rem;
+        padding: 1rem 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+    .card__tour--price {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      text-transform: uppercase; }
+      .card__tour--price-only {
+        font-size: 2rem;
+        margin-bottom: 7rem; }
+      .card__tour--price-pr {
+        font-size: 6rem;
+        font-weight: normal; }
+  .card__photo {
+    background-image: linear-gradient(to right, rgba(255, 185, 0, 0.4), rgba(255, 119, 48, 0.4)), url(../../img/nat-6.jpg);
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0%, 100% 80%, 0% 100%);
+    width: 100%;
+    height: 45%;
+    z-index: 10;
+    -webkit-background-blend-mode: revert;
+    background-blend-mode: revert; }
+    .card__photo--info {
+      position: absolute;
+      top: 10rem;
+      right: 3rem;
+      padding: 1rem;
+      background-image: linear-gradient(to right, rgba(255, 185, 0, 0.5), rgba(255, 119, 48, 0.5));
+      font-size: 2.5rem;
+      color: #fff;
+      line-height: 1.6;
+      text-transform: uppercase;
+      text-align: right; }
+  .card:hover .card__tour--front {
+    transform: rotateY(180deg); }
+  .card:hover .card__tour--back {
+    transform: rotateY(0deg); }
 
 .bottom {
   position: absolute;
@@ -284,3 +368,6 @@ body {
   transform: skewY(-7deg); }
   .section-feature > * {
     transform: skewY(7deg); }
+
+.section-tour {
+  margin: 20rem 0 60rem 0; }

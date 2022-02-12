@@ -1,10 +1,10 @@
-.header__btn {
+.btn__white {
   font-size: 1.8rem;
   margin-top: 5rem;
   width: 30rem;
   height: 5rem;
   background-color: $color-white;
-  color: black;
+  color: $color-text;
   border: none;
   text-decoration: none;
   padding: 1.5rem;
@@ -55,4 +55,9 @@
   &:active {
     transform: translateY(0rem);
   }
+}
+.btn__buy {
+  width: 15rem;
+  text-align: center;
+  color: $color-text;
 }
