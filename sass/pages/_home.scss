@@ -27,3 +27,8 @@
 .section-tour {
   margin: 20rem 0 60rem 0;
 }
+.section__tour-row {
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+}

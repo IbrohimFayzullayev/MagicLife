@@ -2,9 +2,8 @@
   position: relative;
   transition: all 0.5s;
   -webkit-perspective: 150rem;
-  perspective: 150rem;
+  perspective: 120rem;
   cursor: pointer;
-  display: block;
   &__tour {
     background-color: $section-back-color;
     height: 45rem;
@@ -14,7 +13,8 @@
     top: 0;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    transition: all 0.5s;
+    transition: all 0.6s;
+    box-shadow: 0 1.5rem 3rem rgba($color-black, 0.2);
     &--front {
       z-index: 5;
       transform: rotateY(0deg);
@@ -22,11 +22,25 @@
     &--back {
       background-image: linear-gradient(
         to right,
-        rgba($color-secondary-light-1, 0.98),
-        rgba($color-secondary-light-2, 0.98)
+        rgba($color-secondary-light-1, 0.9),
+        rgba($color-secondary-light-2, 0.9)
       );
       transform: rotateY(180deg);
       text-align: center;
+      &--2 {
+        background-image: linear-gradient(
+          to right,
+          rgba($color-tertiary-light-1, 0.9),
+          rgba($color-tertiary-light-2, 0.9)
+        );
+      }
+      &--3 {
+        background-image: linear-gradient(
+          to right,
+          rgba($color-primary-light, 0.9),
+          rgba($color-primary-dark, 0.9)
+        );
+      }
     }
     &--list {
       &-ul {
@@ -73,6 +87,22 @@
     z-index: 10;
     -webkit-background-blend-mode: revert;
     background-blend-mode: revert;
+    &--3 {
+      background-image: linear-gradient(
+          to right,
+          rgba($color-primary-light, 0.6),
+          rgba($color-primary-dark, 0.6)
+        ),
+        url(../../img/nat-7.jpg);
+    }
+    &--2 {
+      background-image: linear-gradient(
+          to right,
+          rgba($color-tertiary-light-1, 0.6),
+          rgba($color-tertiary-light-2, 0.6)
+        ),
+        url(../../img/nat-8.jpg);
+    }
     &--info {
       position: absolute;
       top: 10rem;
@@ -88,6 +118,20 @@
       line-height: 1.6;
       text-transform: uppercase;
       text-align: right;
+      &--3 {
+        background-image: linear-gradient(
+          to right,
+          rgba($color-primary-light, 0.6),
+          rgba($color-primary-dark, 0.6)
+        );
+      }
+      &--2 {
+        background-image: linear-gradient(
+          to right,
+          rgba($color-tertiary-light-1, 0.6),
+          rgba($color-tertiary-light-2, 0.6)
+        );
+      }
     }
   }
   &:hover {

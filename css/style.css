@@ -216,9 +216,9 @@ body {
 .card {
   position: relative;
   transition: all 0.5s;
-  perspective: 150rem;
-  cursor: pointer;
-  display: block; }
+  -webkit-perspective: 150rem;
+  perspective: 120rem;
+  cursor: pointer; }
   .card__tour {
     background-color: #f7f7f7;
     height: 45rem;
@@ -228,14 +228,19 @@ body {
     top: 0;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    transition: all 0.5s; }
+    transition: all 0.6s;
+    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2); }
     .card__tour--front {
       z-index: 5;
       transform: rotateY(0deg); }
     .card__tour--back {
-      background-image: linear-gradient(to right, rgba(255, 185, 0, 0.98), rgba(255, 119, 48, 0.98));
+      background-image: linear-gradient(to right, rgba(255, 185, 0, 0.9), rgba(255, 119, 48, 0.9));
       transform: rotateY(180deg);
       text-align: center; }
+      .card__tour--back--2 {
+        background-image: linear-gradient(to right, rgba(41, 152, 255, 0.9), rgba(86, 67, 250, 0.9)); }
+      .card__tour--back--3 {
+        background-image: linear-gradient(to right, rgba(85, 197, 122, 0.9), rgba(40, 180, 133, 0.9)); }
     .card__tour--list-ul {
       margin-top: 2rem;
       list-style: none;
@@ -268,6 +273,10 @@ body {
     z-index: 10;
     -webkit-background-blend-mode: revert;
     background-blend-mode: revert; }
+    .card__photo--3 {
+      background-image: linear-gradient(to right, rgba(85, 197, 122, 0.6), rgba(40, 180, 133, 0.6)), url(../../img/nat-7.jpg); }
+    .card__photo--2 {
+      background-image: linear-gradient(to right, rgba(41, 152, 255, 0.6), rgba(86, 67, 250, 0.6)), url(../../img/nat-8.jpg); }
     .card__photo--info {
       position: absolute;
       top: 10rem;
@@ -279,6 +288,10 @@ body {
       line-height: 1.6;
       text-transform: uppercase;
       text-align: right; }
+      .card__photo--info--3 {
+        background-image: linear-gradient(to right, rgba(85, 197, 122, 0.6), rgba(40, 180, 133, 0.6)); }
+      .card__photo--info--2 {
+        background-image: linear-gradient(to right, rgba(41, 152, 255, 0.6), rgba(86, 67, 250, 0.6)); }
   .card:hover .card__tour--front {
     transform: rotateY(180deg); }
   .card:hover .card__tour--back {
@@ -371,3 +384,8 @@ body {
 
 .section-tour {
   margin: 20rem 0 60rem 0; }
+
+.section__tour-row {
+  display: flex;
+  gap: 5rem;
+  align-items: center; }
