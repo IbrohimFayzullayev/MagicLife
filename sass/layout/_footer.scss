@@ -1,11 +1,51 @@
-.bottom {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-image: url(img/tabiat.jpg);
-  background-size: cover;
-  background-position: center;
-  clip-path: circle(25% at 70% 60%);
+.footer {
+  padding: 6rem 0;
+  background-color: $footer-back-color;
+  font-size: 1.6rem;
+  color: $color-white;
+  .row {
+    &:not(:last-child) {
+      margin-right: 10rem;
+    }
+  }
+  [class^="footer__info--"] {
+    padding-top: 2rem;
+    border-top: 0.5px solid $color-white;
+    width: 95%;
+    box-sizing: border-box;
+  }
+  &--logo {
+    max-width: 20rem;
+    margin: 0 auto;
+    margin-bottom: 8rem;
+  }
+  a {
+    text-decoration: none;
+    color: $color-white;
+    text-transform: uppercase;
+  }
+  &__info {
+    padding: 3rem 0 10rem 0;
+    &--about {
+      line-height: 1.5;
+    }
+    &-nav {
+      a {
+        &:not(:last-child) {
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+}
+.hover__link {
+  display: inline-block;
+  transition: all 0.2s;
+  &:hover {
+    color: $color-primary-dark;
+    // padding: 0.3rem 0;
+    box-shadow: 0 1.5rem 3rem rgba(#000, 0.6);
+    box-sizing: border-box;
+    transform: rotate(5deg) scale(1.2);
+  }
 }
