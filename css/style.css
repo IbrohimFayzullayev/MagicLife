@@ -333,6 +333,31 @@ body {
   .card:hover .card__tour--back {
     transform: rotateY(0deg); }
 
+.story {
+  padding: 4rem;
+  max-width: 70%;
+  margin: 0 auto;
+  background-color: #f7f7f7;
+  shape-outside: circle(50% at 50% 50%); }
+  .story__img {
+    position: relative;
+    float: left;
+    width: 15rem;
+    height: 15rem;
+    clip-path: circle(50% at 50% 50%); }
+    .story__img--box {
+      height: 100%;
+      transform: translateX(-3.4rem); }
+    .story__img--text {
+      opacity: 1;
+      color: aqua;
+      position: absolute;
+      font-size: 2rem;
+      text-transform: uppercase;
+      z-index: 20; }
+  .story__info--text {
+    width: 75%; }
+
 .footer {
   padding: 6rem 0;
   background-color: #333333;
@@ -464,3 +489,6 @@ body {
   display: flex;
   gap: 5rem;
   align-items: center; }
+
+.section-stories {
+  padding: 25rem 0; }

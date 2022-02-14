@@ -143,3 +143,35 @@
     }
   }
 }
+.story {
+  padding: 4rem;
+  max-width: 70%;
+  margin: 0 auto;
+  background-color: $section-back-color;
+  shape-outside: circle(50% at 50% 50%);
+  &__img {
+    position: relative;
+    float: left;
+    width: 15rem;
+    height: 15rem;
+    clip-path: circle(50% at 50% 50%);
+    &--box {
+      height: 100%;
+      transform: translateX(-3.4rem);
+    }
+    &--text {
+      opacity: 1;
+      color: aqua;
+      position: absolute;
+      font-size: 2rem;
+      text-transform: uppercase;
+      z-index: 20;
+    }
+  }
+  &__info {
+    &--text {
+      // display: inline;
+      width: 75%;
+    }
+  }
+}
