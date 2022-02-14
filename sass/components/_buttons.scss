@@ -61,3 +61,44 @@
   text-align: center;
   color: $color-text;
 }
+.card__tour--btn {
+  margin-top: 56rem;
+}
+.btn-green {
+  background-color: rgb(0, 73, 0);
+  color: $color-white;
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding: 1.4rem 0;
+  border-radius: 3rem;
+  display: inline-block;
+  width: 30rem;
+  margin: 0 auto;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-radius: 3rem;
+    transition: all 0.8s;
+    text-decoration: none;
+    z-index: -1;
+    background-color: rgb(0, 73, 0);
+  }
+  &:hover {
+    cursor: pointer;
+    &::after {
+      transform: scale(1.6);
+      opacity: 0;
+      z-index: 1;
+    }
+  }
+  &:visited,
+  &:active {
+    background-color: rgba(0, 73, 0, 0.6);
+  }
+}

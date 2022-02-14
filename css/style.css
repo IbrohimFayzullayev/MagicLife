@@ -157,6 +157,42 @@ body {
   text-align: center;
   color: #555; }
 
+.card__tour--btn {
+  margin-top: 56rem; }
+
+.btn-green {
+  background-color: #004900;
+  color: #fff;
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding: 1.4rem 0;
+  border-radius: 3rem;
+  display: inline-block;
+  width: 30rem;
+  margin: 0 auto;
+  position: relative; }
+  .btn-green::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-radius: 3rem;
+    transition: all 0.8s;
+    text-decoration: none;
+    z-index: -1;
+    background-color: #004900; }
+  .btn-green:hover {
+    cursor: pointer; }
+    .btn-green:hover::after {
+      transform: scale(1.6);
+      opacity: 0;
+      z-index: 1; }
+  .btn-green:visited, .btn-green:active {
+    background-color: rgba(0, 73, 0, 0.6); }
+
 .compositions {
   position: relative; }
   .compositions__photo {
@@ -406,6 +442,7 @@ body {
   margin-bottom: 9rem; }
 
 .section-feature {
+  margin-top: -18rem;
   padding: 35rem 0;
   box-sizing: border-box;
   height: 100vh;
@@ -419,7 +456,8 @@ body {
     transform: skewY(7deg); }
 
 .section-tour {
-  margin: 20rem 0 60rem 0;
+  margin-top: -8rem;
+  padding: 20rem 0 15rem 0;
   background-color: #f7f7f7; }
 
 .section__tour-row {
