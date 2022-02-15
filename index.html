@@ -10,6 +10,32 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <div class="navigation">
+      <input type="checkbox" id="nav__check" class="navigation__checkbox" />
+      <label for="nav__check" class="navigation__button">
+        <span class="navigation__icon"></span>
+      </label>
+      <div class="navigation__background"></div>
+      <div class="navigation__menu">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">01 About MagicLife</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">02 Your Benefit</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">03 Popular tours</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">04 Stories</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">05 Book now</a>
+          </li>
+        </ul>
+      </div>
+    </div>
     <div class="header">
       <img class="header__logo" src="img/logo-white.png" alt="#" />
       <div class="header__name"><h1>OUTDOORS</h1></div>
@@ -140,7 +166,7 @@
                 <div class="card__tour--price">
                   <p class="card__tour--price-only">Only</p>
                   <p class="card__tour--price-pr">$297</p>
-                  <a class="btn btn__white btn__buy" href="#">BUY NOW</a>
+                  <a class="btn btn__white btn__buy" href="#popup">BUY NOW</a>
                 </div>
               </div>
             </div>
@@ -167,7 +193,7 @@
                 <div class="card__tour--price">
                   <p class="card__tour--price-only">Only</p>
                   <p class="card__tour--price-pr">$297</p>
-                  <a class="btn btn__white btn__buy" href="#">BUY NOW</a>
+                  <a class="btn btn__white btn__buy" href="#popup">BUY NOW</a>
                 </div>
               </div>
             </div>
@@ -194,7 +220,7 @@
                 <div class="card__tour--price">
                   <p class="card__tour--price-only">Only</p>
                   <p class="card__tour--price-pr">$297</p>
-                  <a class="btn btn__white btn__buy" href="#">BUY NOW</a>
+                  <a class="btn btn__white btn__buy" href="#popup">BUY NOW</a>
                 </div>
               </div>
             </div>
@@ -322,6 +348,48 @@
             design. A credit to the original author, Jonas Schmedtmann, is of
             course highly appreciated!
           </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup" id="popup">
+      <div class="popup__box">
+        <div class="popup__content">
+          <div class="popup__content--img">
+            <img src="img/nat-8.jpg" alt="img" />
+          </div>
+          <div class="popup__content--img">
+            <img src="img/nat-9.jpg" alt="img" />
+          </div>
+        </div>
+        <div class="popup__info">
+          <p class="popup__info--close " id="close">&#x2715</p>
+          <h2 class="heading-secondary">Start Booking Now</h2>
+          <h3 class="heading-tertiary popup__title">
+            IMPORTANT – PLEASE READ THESE TERMS BEFORE BOOKING
+          </h3>
+          <div class="popup__info--box">
+            
+            <p class="popup__info--text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed
+              sed risus pretium quam. Aliquam sem et tortor consequat id.
+              Volutpat odio facilisis mauris sit amet massa vitae. Mi bibendum
+              neque egestas congue. Placerat orci nulla pellentesque dignissim
+              enim sit. Vitae semper quis lectus nulla at volutpat diam ut
+              venenatis. Malesuada pellentesque elit eget gravida cum sociis
+              natoque pe
+            </p>
+            <p class="popup__info--text">
+              natibus et. Proin fermentum leo vel orci porta non pulvinar neque
+              laoreet. Gravida neque convallis a cras semper. Molestie at
+              elementum eu facilisis sed odio morbi quis. Faucibus vitae aliquet
+              nec ullamcorper sit amet risus nullam eget. Nam libero justo
+              laoreet sit. Amet massa vitae tortor condimentum lacinia quis vel
+              eros donec. Sit amet facilisis magna etiam. Imperdiet sed euismod
+              nisi porta.
+            </p>
+          </div>
+          <a href="#" class="btn-popup btn-green">Book Now</a>
         </div>
       </div>
     </div>
