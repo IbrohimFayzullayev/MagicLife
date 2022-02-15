@@ -141,7 +141,8 @@ body {
     opacity: 0; }
 
 .btn-text {
-  transition: all 0.2s; }
+  transition: all 0.2s;
+  padding: 0.3rem; }
   .btn-text:link, .btn-text:visited {
     font-size: 1.6rem;
     color: #7ed56f;
@@ -425,9 +426,11 @@ body {
       outline: none;
       border-bottom: 0.3rem solid #fff; }
       .form__group--input:focus {
+        border-bottom: 0.3rem solid #33ff00; }
+      .form__group--input:focus:invalid {
         border-bottom: 0.3rem solid orange; }
-      .form__group--input:not(:placeholder-shown) ~ .form__group--input--label {
-        top: 3.4rem;
+      .form__group--input:not(:placeholder-shown) + .form__group--label {
+        top: 6rem;
         opacity: 1;
         z-index: 10; }
 

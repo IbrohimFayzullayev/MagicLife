@@ -35,10 +35,13 @@
       outline: none;
       border-bottom: 0.3rem solid $color-white;
       &:focus {
+        border-bottom: 0.3rem solid rgb(51, 255, 0);
+      }
+      &:focus:invalid {
         border-bottom: 0.3rem solid orange;
       }
-      &:not(:placeholder-shown) ~ &--label {
-        top: 3.4rem;
+      &:not(:placeholder-shown) + .form__group--label {
+        top: 6rem;
         opacity: 1;
         z-index: 10;
       }
