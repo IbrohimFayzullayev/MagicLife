@@ -65,9 +65,9 @@
   margin-top: 56rem;
 }
 .btn-green {
-  background-color: rgb(0, 73, 0);
+  background-color: $color-primary-dark;
   color: $color-white;
-  font-size: 2rem;
+  font-size: 1.6rem;
   text-transform: uppercase;
   padding: 1.4rem 0;
   border-radius: 3rem;
@@ -87,7 +87,7 @@
     transition: all 0.8s;
     text-decoration: none;
     z-index: -1;
-    background-color: rgb(0, 73, 0);
+    background-color: $color-primary-dark;
   }
   &:hover {
     cursor: pointer;
@@ -99,6 +99,9 @@
   }
   &:visited,
   &:active {
-    background-color: rgba(0, 73, 0, 0.6);
+    background-color: $color-primary-light;
   }
+}
+.story__btn {
+  padding-bottom: 6rem;
 }

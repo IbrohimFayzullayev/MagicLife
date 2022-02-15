@@ -144,34 +144,69 @@
   }
 }
 .story {
-  padding: 4rem;
-  max-width: 70%;
-  margin: 0 auto;
+  padding: 6rem;
+  max-width: 60%;
+  margin: 8rem auto;
   background-color: $section-back-color;
-  shape-outside: circle(50% at 50% 50%);
+  transform: skewX(-12deg);
+  > * {
+    transform: skewX(12deg);
+  }
   &__img {
     position: relative;
     float: left;
     width: 15rem;
     height: 15rem;
     clip-path: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    margin-right: 3rem;
     &--box {
       height: 100%;
-      transform: translateX(-3.4rem);
+      transform: translateX(-3.4rem) scale(1.4);
+      transition: all 0.6s;
     }
     &--text {
-      opacity: 1;
-      color: aqua;
+      color: $color-white;
       position: absolute;
-      font-size: 2rem;
+      line-height: 1.6;
+      font-size: 1.6rem;
       text-transform: uppercase;
-      z-index: 20;
+      z-index: 10;
+      display: block;
+      top: 80%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      opacity: 0;
+      transition: all 0.5s;
     }
   }
   &__info {
+    color: $color-text;
+    &--title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      &::after {
+        content: "";
+        display: none;
+      }
+    }
     &--text {
-      // display: inline;
+      font-size: 1.6rem;
+      line-height: 1.7;
+      display: inline;
       width: 75%;
+    }
+  }
+  &:hover {
+    .story__img--box {
+      filter: blur(0.2rem) brightness(80%);
+      transform: scale(1) translateX(-4rem);
+    }
+    .story__img--text {
+      top: 50%;
+      opacity: 1;
     }
   }
 }
