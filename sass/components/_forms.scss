@@ -1,0 +1,47 @@
+.booking--form {
+  width: 75%;
+  height: 75vh;
+  margin: 0 auto;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 3rem rgba($color-black, 0.3);
+  background-image: linear-gradient(
+      105deg,
+      rgba($color-white, 0.9) 0%,
+      rgba($color-white, 0.9) 50%,
+      transparent 50%
+    ),
+    url(/img/nat-10.jpg);
+  background-size: cover;
+}
+.form {
+  padding: 6rem;
+  &__group {
+    position: relative;
+    margin-top: 5rem;
+    &--label {
+      transition: all 0.6s;
+      position: absolute;
+      font-size: 1.4rem;
+      top: 1.6rem;
+      left: 1.6rem;
+      color: $color-text;
+      opacity: 0;
+    }
+    &--input {
+      width: 40%;
+      border: none;
+      padding: 1.6rem;
+      font-size: 1.6rem;
+      outline: none;
+      border-bottom: 0.3rem solid $color-white;
+      &:focus {
+        border-bottom: 0.3rem solid orange;
+      }
+      &:not(:placeholder-shown) ~ &--label {
+        top: 3.4rem;
+        opacity: 1;
+        z-index: 10;
+      }
+    }
+  }
+}

@@ -47,8 +47,12 @@
   box-sizing: border-box;
   overflow: hidden;
   z-index: -1;
-  // &--content {
-  //   width: 100%;
-  //   height: 100%;
-  // }
+}
+.section-booking {
+  padding: 15rem 0;
+  background-image: linear-gradient(
+    to right,
+    $color-primary,
+    $color-primary-light
+  );
 }

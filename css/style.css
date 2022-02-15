@@ -344,7 +344,7 @@ body {
   padding: 6rem;
   max-width: 60%;
   margin: 8rem auto;
-  background-color: #f7f7f7;
+  background-color: rgba(247, 247, 247, 0.6);
   transform: skewX(-12deg); }
   .story > * {
     transform: skewX(12deg); }
@@ -394,6 +394,42 @@ body {
   .story:hover .story__img--text {
     top: 50%;
     opacity: 1; }
+
+.booking--form {
+  width: 75%;
+  height: 75vh;
+  margin: 0 auto;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.3);
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(/img/nat-10.jpg);
+  background-size: cover; }
+
+.form {
+  padding: 6rem; }
+  .form__group {
+    position: relative;
+    margin-top: 5rem; }
+    .form__group--label {
+      transition: all 0.6s;
+      position: absolute;
+      font-size: 1.4rem;
+      top: 1.6rem;
+      left: 1.6rem;
+      color: #555;
+      opacity: 0; }
+    .form__group--input {
+      width: 40%;
+      border: none;
+      padding: 1.6rem;
+      font-size: 1.6rem;
+      outline: none;
+      border-bottom: 0.3rem solid #fff; }
+      .form__group--input:focus {
+        border-bottom: 0.3rem solid orange; }
+      .form__group--input:not(:placeholder-shown) ~ .form__group--input--label {
+        top: 3.4rem;
+        opacity: 1;
+        z-index: 10; }
 
 .footer {
   padding: 6rem 0;
@@ -539,3 +575,7 @@ body {
   box-sizing: border-box;
   overflow: hidden;
   z-index: -1; }
+
+.section-booking {
+  padding: 15rem 0;
+  background-image: linear-gradient(to right, #7ed56f, #55c57a); }

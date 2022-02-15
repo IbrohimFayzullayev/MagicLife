@@ -147,7 +147,7 @@
   padding: 6rem;
   max-width: 60%;
   margin: 8rem auto;
-  background-color: $section-back-color;
+  background-color: rgba($section-back-color, 0.6);
   transform: skewX(-12deg);
   > * {
     transform: skewX(12deg);
