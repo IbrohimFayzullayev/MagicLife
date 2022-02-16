@@ -497,6 +497,7 @@ body {
         border-right: 1px solid #777;
         padding-right: 1rem; }
     .popup__info--close {
+      text-decoration: none;
       cursor: pointer; }
       .popup__info--close:target .popup {
         visibility: hidden;

@@ -64,6 +64,7 @@
       }
     }
     &--close {
+      text-decoration: none;
       cursor: pointer;
       &:target .popup {
         visibility: hidden;
